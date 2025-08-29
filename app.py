@@ -22,7 +22,11 @@ MAX_QUESTIONS = 3
 user_questions = []
 bot_answers = []
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="src/templates",
+    static_folder="src/static"
+)
 
 def chat_with_gemini(prompt):
     response = client.models.generate_content(
