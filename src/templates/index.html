@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatbot SQL/NoSQL</title>
+    <!-- Ajuste o caminho para a pasta templates -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <h2>Chatbot SQL/NoSQL</h2>
+    <div id="chat"></div>
+
+    <div id="inputBox">
+      <input
+        id="message"
+        type="text"
+        placeholder="Digite sua pergunta..."
+        onkeydown="if(event.key==='Enter'){sendMessage();}"
+      />
+      <button id="sendBtn" onclick="sendMessage()">Enviar</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
