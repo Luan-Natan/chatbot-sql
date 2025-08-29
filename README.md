@@ -15,19 +15,23 @@ Permitir que usuários aprendam conceitos de **SQL, NoSQL e ecossistema de SGBDs
 ## 📹 Vídeo de Demonstração
 
 Você pode assistir à execução do chatbot no vídeo:  
-[Link para o vídeo](COLE_AQUI_O_LINK_DO_YOUTUBE_OU_DRIVE)
+[Link para o vídeo] https://drive.google.com/drive/folders/1we50nXq1ZSK4SJnJ_VWDu_qA4b8qiHvR?usp=sharing
 
 ---
 
-## ⚙️ Requisitos
+## 😎 Chatbot hospedado
 
-- Navegador moderno (Chrome, Edge, Firefox, etc.)
-- **Python 3** (para rodar o servidor Flask)
-- **API Key Gemini** da Google (armazenada em `.env`)
+Você pode interagir com o chabot nesse link da vercel:  
+[Link para o chatbot] https://chatbot-sql.vercel.app
 
 ---
 
 ## 🏃‍♂️ Como Executar Localmente
+
+### ⚙️ Requisitos
+- Navegador moderno (Chrome, Edge, Firefox, etc.)
+- **Python 3** (para rodar o servidor Flask)
+- **API Key Gemini** da Google (armazenada em `.env`)
 
 1. Clone o repositório:
    ```bash
@@ -53,15 +57,21 @@ Você pode assistir à execução do chatbot no vídeo:
 
 ## 📂 Estrutura do Projeto
     📦 chatbot-sql
-    ├── templates/src
-    │   ├── templates/index.html # Página principal
-    │   ├── static/style.css     # Estilos do chat
-    │   └── static/script.js     # Lógica do chatbot
-    ├── app.py           # Servidor Flask
-    ├── .env-example     # Alterar para .env para adicionar sua API Key
-    ├── .gitignore       # Ignorar arquivos desnecessários
-    ├── README.md        # Documentação
-    └── requirements.txt # Dependências Python
+    │   .env
+    │   .env-example
+    │   .gitignore
+    │   app.py
+    │   README.md
+    │   requirements.txt
+    │   vercel.json
+    │
+    └───src
+        ├───static
+        │       script.js
+        │       style.css
+        │
+        └───templates
+                index.html
 
 ## 💡 Funcionalidades
 1. Chat interativo com efeito de digitação.
