@@ -49,7 +49,6 @@ Você pode interagir com o chabot nesse link da vercel:
 
 4. Inicie o servidor Flask:
     ```bash
-    cd src
     python app.py
 
 5. Abra o navegador e acesse:
