@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from google import genai
+from google.genai.types import GenerateContentConfig
 from dotenv import load_dotenv
 import os
 
@@ -30,8 +31,12 @@ app = Flask(
 
 def chat_with_gemini(prompt):
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
+            model="gemini-2.5-flash",
+            contents=prompt,
+            config=GenerateContentConfig(
+            temperature=0.5,
+            max_output_tokens=1500
+        )
     )
     return response.text
 
